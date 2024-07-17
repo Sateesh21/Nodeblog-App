@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>${post.title}</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="nav.js" defer></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__logo"><a href="/">Blog App</a></div>
+        <a class="nav__hamburger">
+            <span class="nav__hamburger__line"></span>
+            <span class="nav__hamburger__line"></span>
+            <span class="nav__hamburger__line"></span>
+        </a>
+        <div class="nav__menu">
+            <div>
+                <div id="register-div">
+                    <h1>Register</h1>
+                    <form id="register-form">
+                        <input type="text" id="register-username" placeholder="Username" />
+                        <input type="password" id="register-password" placeholder="Password" />
+                        <select id="register-role">
+                            <option value="reader">Reader</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+                <div id="logout-div">
+                    <h2 id="username">Username</h2>
+                    <button id="logout-button">Logout</button>
+                </div>
+
+                <div id="login-div">
+                    <h1>Login</h1>
+                    <form id="login-form">
+                        <input type="text" id="login-username" placeholder="Username" />
+                        <input type="password" id="login-password" placeholder="Password" />
+                    </form>
+                    <button id="login-button" type="submit">Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <img src="${post.imageUrl}" alt="Loading Images has failed">
+        <div class="post-content">
+            <h1 class="post-title">${post.title}</h1>
+            <div class="extra-info">
+                <p class="post-timestamp">${post.timestamp}</p>
+                <p class="post-author">${post.Author}</p> <!--Should be correct-->
+            </div>
+            <p>${post.content}</p>
+        </div>
+
+
+    </main>
+    <footer>
+        <h3>Sateesh Yadav</h3>
+        <p>
+            Explore insightful articles and stay updated with our blog app powered by Node.js. Experience seamless
+            performance and user-friendly interface. Start your journey with us today!
+        </p>
+        <span>
+            <p>&copy;</p>
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+        </span>
+    </footer>
+</body>
+
+</html>
